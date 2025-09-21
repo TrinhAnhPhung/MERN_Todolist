@@ -4,7 +4,7 @@ import './App.css';
 
 // URL của backend API. Trong lúc phát triển là localhost
 // Khi deploy, chúng ta sẽ thay đổi nó.
-const API_BASE = "http://localhost:5000/api/todos";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api/todos";
 
 function App() {
     const [todos, setTodos] = useState([]);
